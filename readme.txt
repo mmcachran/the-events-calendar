@@ -224,7 +224,7 @@ Remember to always make a backup of your database and files before updating!
 
 = [5.1.7] TBD =
 
-
+* Tweak - Update the notice when there are no upcoming events on list and month view.  [TEC-3430]
 
 = [5.1.6] 2020-08-24 =
 
