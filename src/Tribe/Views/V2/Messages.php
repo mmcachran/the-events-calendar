@@ -90,13 +90,21 @@ class Messages {
 	 */
 	public static function for_key( $key, ...$values ) {
 		$map = [
-			'no_results_found'                 => __(
-				'There were no results found.',
-				'the-events-calendar'
+			'no_results_found'                 => sprintf(
+				esc_html_x(
+					'There are no upcoming %s.',
+					'No results message for Event Views.',
+					'the-events-calendar'
+				),
+				tribe_get_event_label_plural_lowercase()
 			),
-			'month_no_results_found'           => __(
-				'There were no results found for this view.',
-				'the-events-calendar'
+			'month_no_results_found'           => sprintf(
+				esc_html_x(
+					'There are no upcoming %s for this view.',
+					'No results message for month view.',
+					'the-events-calendar'
+				),
+				tribe_get_event_label_plural_lowercase()
 			),
 			// translators: the placeholder is the keyword(s), as the user entered it in the bar.
 			'no_results_found_w_keyword'       => __(
